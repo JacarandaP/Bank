@@ -1,4 +1,4 @@
-package se.nackademin.java20.lab1.persistance;
+package se.nackademin.java20.lab1.domain;
 
 import se.nackademin.java20.lab1.domain.Account;
 
@@ -8,4 +8,5 @@ public interface AccountRepository {
     Account save(Account account);
 
     Optional<Account> findByUserIdAndAccountId(String holder, long accountId);
+
 }

@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  mysql:
+    image: mysql:8.0.26
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=lab1
+    ports:
+      - "3306:3306"
+  bank:
+    image: bank
+    environment:
+      - MYSQL_HOST=mysql
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
