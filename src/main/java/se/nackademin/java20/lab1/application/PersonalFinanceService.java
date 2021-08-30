@@ -21,7 +21,7 @@ public class PersonalFinanceService {
         if (riskAssesment.isItApproved(holder)) {
             return accountRepository.save(new Account(holder, 0));
         } else {
-            throw new RuntimeException("Risk assessment could not be done");
+            throw new RuntimeException("Risk assessment could not be done due to risks");
         }
     }
 

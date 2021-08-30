@@ -55,6 +55,7 @@ public class AccountDeserializedTest {
     }
 
     @Test
+    @Ignore
     void restDeserialized() {
         ResponseEntity<String> forEntity = new
                 RestTemplate().getForEntity("http://localhost:8082/risk/dan", String.class);
@@ -63,6 +64,7 @@ public class AccountDeserializedTest {
     }
 
     @Test
+    @Ignore
     void getRest(){
         ResponseEntity<RiskAssesmentDto> forEntity = new
                 RestTemplate().getForEntity("http://localhost:8082/risk/dan", RiskAssesmentDto.class);
