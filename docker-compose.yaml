@@ -7,10 +7,11 @@ services:
       - MYSQL_DATABASE=lab1
     ports:
       - "3306:3306"
-  bank:
-    image: jacarandap/bank
+  bank2:
+    image: jacarandap/bank2
     environment:
       - MYSQL_HOST=mysql
+      - RISK_HOST=riskassesment
     ports:
       - "8080:8080"
     depends_on:
@@ -18,5 +19,7 @@ services:
 
   riskassesment:
     image: daneidmark/risk:0.0.1
+    environment:
+      - SERVER_PORT=8085
     ports:
-      - "8082:8080"
+      - "8085:8085"
